@@ -5,3 +5,4 @@ pdfplumber
 requests
 google-generativeai
 gunicorn
+en_core_web_sm
