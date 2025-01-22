@@ -1,10 +1,13 @@
 import os
 import re
 import spacy
+import spacy.cli
 import pdfplumber
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from gemini_process import extract_details_with_gemini
+
+spacy.cli.download("en_core_web_sm")
 
 app = Flask(__name__, static_folder='build', static_url_path='')
 CORS(app)  # Enable CORS for all routes
