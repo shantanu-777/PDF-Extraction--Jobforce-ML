@@ -1,37 +1,36 @@
+# PDF Extractor
 
-# jobforce_ML
-
-jobforce_ML is a web application designed to extract and process data from PDF files. The application provides two main functionalities: extracting data using a standard method and extracting data using the Gemini AI model for more accurate results. The frontend is built with React and Bootstrap, while the backend is powered by Flask and various Python libraries for PDF processing and natural language processing (NLP).
+PDF Extractor is a web application designed for extracting and processing data from PDF files. The app offers two primary features: extracting data using a conventional method and extracting data using the Gemini AI model for enhanced accuracy. The frontend is built with React and Bootstrap, while the backend utilizes Flask along with various Python libraries for PDF processing and natural language processing (NLP).
 
 ---
 
 ## Project Structure
 
-- **`app.py`**: The main backend application file that handles routes and API endpoints.
-- **`gemini_process.py`**: Contains functions to process PDFs using the Gemini AI model.
-- **`process_pdfs.py`**: Contains functions to process PDFs using standard methods.
-- **`frontend/`**: Contains the React frontend application.
-- **`pdf-parser/`**: Contains the source code for the PDF parser frontend.
-- **`build/`**: Contains the build files for the frontend.
-- **`uploads/`**: Directory to store uploaded PDF files.
-- **`env/`**: Contains environment-specific files and dependencies.
-- **`requirements.txt`**: Lists the Python dependencies for the project.
-- **`render.yaml`**: Configuration file for deploying the application using Render.
+- **`app.py`**: The main backend application file managing routes and API endpoints.
+- **`gemini_process.py`**: Includes functions for processing PDFs with the Gemini AI model.
+- **`process_pdfs.py`**: Contains functions for standard PDF processing.
+- **`frontend/`**: Holds the React frontend application.
+- **`pdf-parser/`**: Source code for the PDF parser frontend.
+- **`build/`**: Build files for the frontend.
+- **`uploads/`**: Directory for storing uploaded PDF files.
+- **`env/`**: Environment-specific files and dependencies.
+- **`requirements.txt`**: Lists Python dependencies for the project.
+- **`render.yaml`**: Configuration file for deploying the app using Render.
 
 ---
 
 ## Key Functionalities
 
-### PDF Upload and Extraction
+### PDF Upload and Data Extraction
 
 1. **Standard Extraction**:
-   - Users can upload PDF files through the frontend.
+   - Users can upload PDF files via the frontend interface.
    - The backend processes the uploaded PDF to extract text and relevant details.
-   - Extracted data includes fields like Name, Phone, and Address.
+   - Extracted information includes fields like Name, Phone Number, and Address.
 
 2. **Gemini AI Extraction**:
-   - Users can opt to extract data using the Gemini AI model for improved accuracy.
-   - The backend uses the Gemini API to process the text and extract details.
+   - Users can choose to extract data using the Gemini AI model for greater precision.
+   - The backend leverages the Gemini API to process the text and extract details.
 
 ---
 
@@ -39,13 +38,13 @@ jobforce_ML is a web application designed to extract and process data from PDF f
 
 - **Framework**: Flask
 - **Key Routes**:
-  - `/upload`: Handles PDF uploads and extracts data using standard methods.
+  - `/upload`: Handles PDF uploads and extracts data using the standard method.
   - `/extract_with_gemini`: Extracts data using the Gemini AI model.
 
 - **Core Functions**:
-  - `extract_text_from_pdf`: Extracts text from the PDF using pdfplumber.
-  - `extract_details`: Uses spaCy's NER model to extract details from the text.
-  - `extract_details_with_gemini`: Uses the Gemini API to extract details from the text.
+  - `extract_text_from_pdf`: Uses pdfplumber to extract text from PDF files.
+  - `extract_details`: Employs spaCy's NER model to extract specific details from the text.
+  - `extract_details_with_gemini`: Uses the Gemini API for extracting details from the text.
 
 ---
 
@@ -54,16 +53,17 @@ jobforce_ML is a web application designed to extract and process data from PDF f
 - **Framework**: React
 - **Styling**: Bootstrap
 - **Key Features**:
-  - Upload PDF files.
-  - View extracted data in an interactive interface.
-  - Retry extraction using the Gemini AI model for improved accuracy.
-- **API Communication**: Axios is used to make API requests to the backend.
+  - Upload PDF files through an interactive interface.
+  - Display extracted data in a user-friendly format.
+  - Reprocess data extraction using the Gemini AI model for improved results.
+- **API Communication**: Axios is used to handle API requests to the backend.
 
 ---
 
 ## Deployment
 
-- **Link**: [jobforce_ML](https://jobforce-ml.onrender.com/) Since it is a free instance it might take some time to load. Please bear with it 😅
+- **Link**: [PDF Extractor](https://pdf-extraction-ml.onrender.com)
+  - Note: Since this is hosted on a free instance, it may take a few moments to load.
 
 ---
 
@@ -86,8 +86,8 @@ jobforce_ML is a web application designed to extract and process data from PDF f
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/jobforce_ML.git
-   cd jobforce_ML
+   git clone https://github.com/your-username/pdf-extractor.git
+   cd pdf-extractor
    ```
 
 2. Install backend dependencies:
@@ -109,19 +109,19 @@ jobforce_ML is a web application designed to extract and process data from PDF f
 
 5. Open the application in your browser at `http://localhost`.
 
-6. Upload a PDF file through the interface and view the extracted data. Retry extraction using the Gemini AI model if necessary.
+6. Upload a PDF file via the interface and view the extracted data. Optionally, retry extraction using the Gemini AI model for enhanced accuracy.
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit a pull request or open an issue for feature suggestions or bug fixes.
+Contributions are welcome! Feel free to open a pull request or an issue for feature suggestions or bug reports.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. Refer to the `LICENSE` file for more information.
 
 ---
 
@@ -129,5 +129,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 - **Flask** for backend development.
 - **React** and **Bootstrap** for the frontend.
-- **Gemini API** for enhanced PDF data extraction.
+- **Gemini API** for advanced PDF data extraction.
 - **spaCy** and **pdfplumber** for natural language processing and PDF parsing.
+
