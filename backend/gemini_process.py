@@ -72,7 +72,7 @@ def process_pdf(pdf_path):
 
 # Example usage
 if __name__ == "__main__":
-    pdf_path = "uploads\Bhargav_Patki_Resume.pdf"  # Replace with the path to your PDF
+    pdf_path = "uploads\example.pdf"  # Replace with the path to your PDF
     result = process_pdf(pdf_path)
     if result:
         print(json.dumps(result, indent=4))
